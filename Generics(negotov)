@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Generics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*int a = 500;
+            string b = "Hi";
+            Box<int> int_box = new Box<int>();
+            Box<string> string_box = new Box<string>();
+            int_box.Set(ref a);
+            string_box.Set(ref b);
+            int_box.Get();
+            string_box.Get(); */
+
+        }
+    }
+    /* public class Box<T>
+     {
+         private T _value;
+
+         {
+             get { return _value; }
+             set { _value = value; }
+         }
+
+        public void Get()
+        {
+            Console.WriteLine($"В коробке : {_value}, с типом {typeof(T).Name}");
+        }
+
+        public void Set(ref T value)
+        {
+            _value = value;
+            Console.WriteLine($"Вы положили : {_value}");
+        }
+    }*/
+    public class Pair<T1, T2>
+    {
+        public T1 first;
+        public T2 Second;
+    }
+    Pair<int, string> p = new Pair<int, string>();
+    p.first = 42;
+    p.Second = "братуха";
+}
